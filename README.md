@@ -18,12 +18,15 @@ This repository contains the data required to initalize a Canvas environment in 
 >The database snapshot has only been tested on the version of Canvas used to develop the environment setup scripts. A repository with that version of Canvas will be made available in the future. 
 
 
-
 # CASCON 2026 Evaluation Dataset
+
+**Raw results available at [https://zenodo.org/records/21285248](https://zenodo.org/records/21285248)**
 
 From the 460 side-effect task instances defined in `tasks.yaml` a random selection of 46 task instances for model construction and then 46 task instances for evaluation was generated using the following script.
 
 `python3 task_selection.py --input ./tasks.json --format both --random-sample 1 --training-csv training_instances.csv`
+
+>Note that task `fa70e65c-16fb-4d03-9041-bcf07cf6ae02` with evaluation instance `4913209a-2b56-48ed-b275-2712186727b6` had to be excluded from the evaluation results after-the-fact due to an environment error that made it impossible to complete. Hence the reported 45 tasks in the paper.
 
 >Task are only generated in OdoBot and WebVoyager format, as the [Agent-E repository](https://github.com/EmergenceAI/Agent-E) includes its own tools for converting WebVoyager tasks into Agent-E tasks.
 
