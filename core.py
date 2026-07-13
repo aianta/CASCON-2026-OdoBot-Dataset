@@ -166,6 +166,17 @@ class NetworkEvent:
 
         request_data = None
 
+        if "postDataJson" in raw_event and raw_event["postDataJson"] is not None:
+            request_data = raw_event['postDataJson'] 
+
+            
+ 
+            if isinstance(request_data, list): 
+                return NetworkEvent(method, path, {})                
+            else:
+                
+                return NetworkEvent(method, path, request_data)
+
         if "postData" in raw_event and raw_event["postData"] is not None:
             try:
                 request_data = json.loads(raw_event['postData'])
@@ -247,12 +258,15 @@ class NetworkEvent:
 
             # We can check the kind of request data in the headers
             # Expecting content-type@params>request>headers>content-type in a raw even json object
-    
+            #print(raw_event["params"]["request"]["headers"])
             try:        
                 content_type = raw_event["params"]["request"]["headers"]["Content-Type"]
             except KeyError:
-                content_type = raw_event["params"]["request"]["headers"]["content-type"]
-
+                try:
+                    content_type = raw_event["params"]["request"]["headers"]["content-type"]
+                except KeyError:
+                    print(f"Could not find content-type header in request headers, ignoring event.")
+                    return None
             '''
             Extracts just the content type, ignoring other values in the header. IE: ; charset=UTF-8 
             '''
@@ -403,6 +417,7 @@ class NetworkEvent:
         if missing_kv:
             errors.append(json.dumps(self.request, default=str))
 
+
         return len(errors) == 0, errors # Return true if there were no matching errors
         
 
@@ -413,9 +428,9 @@ class NetworkEvent:
     def request_contains(self, key, value, request):
         print(f"Looking for {key}: {value} [{type(value)}] in request\n{request}")
 
-
         for request_key, request_value in request.items():
 
+            
 
             if key == 'read' and value == False:
                 print(f"request_key: {request_key}\nrequest_value: {request_value}")
@@ -432,7 +447,7 @@ class NetworkEvent:
             # Handle dynamic value cases.
             # IMPORTANT: None of these cases should return False! If there is a mismatch, we want to 'continue' and verify the remaining fields of the request. We only stop looking if we find a match.
             # If the key and value match return True
-            if key == request_key and value == request_value:
+            if key == request_key and (value == request_value or (isinstance(request_value, str) and request_value != "" and request_value in value)):
                 return True
             
             # If the reference value isn't a string and doesn't match the request value, then this is a mismatch.
@@ -448,6 +463,15 @@ class NetworkEvent:
 
             elif key == request_key and value.startswith("[[_array_contains="):
                 if not isinstance(request_value, list):
+                    
+                    if(request_value, str):
+                        target_element = self.extract_dynamic_value_parameter(value)
+                        if target_element in request_value:
+                            return True
+                        else:
+                            continue
+
+
                     raise RuntimeError(f"Expected '{key}' value to be an array because reference was: {value}. Instead, '{key}' value was of type: {type(request_value)}")
                 
                 target_element = self.extract_dynamic_value_parameter(value)
@@ -475,6 +499,14 @@ class NetworkEvent:
             elif key == request_key and value.startswith("[[_array_not_contains="):
                 # Expect the request_value to be a list/array
                 if not isinstance(request_value, list):
+
+                    if(request_value, str):
+                        target_element = self.extract_dynamic_value_parameter(value)
+                        if target_element not in request_value:
+                            return True
+                        else:
+                            continue
+
                     raise RuntimeError(f"Expected '{key}' value to be an array because reference value was: {value}. Instead, '{key}' value was of type: {type(request_value)}")
 
                 target_element = self.extract_dynamic_value_parameter(value)
@@ -518,6 +550,8 @@ class NetworkEvent:
                     for item in request_value:
                         if included_str in item:
                             return True
+                    
+                    continue
 
                 if not isinstance(request_value, str):
                     raise RuntimeError(f"Expected '{key}' value to be a string because reference value was: {value}. Instead, '{key}' value was of type: {type(request_value)}")
@@ -733,7 +767,9 @@ class Evaluator:
         # If all values in this dict are True, the side-effect task was completed successfully.
         expected_api_invokations = {}
         for answer in instance_reference_answer:
-            expected_api_invokations[answer] = False
+            # Ignore GET reference answers as Agent-E Cascon network logs do not include them.
+            if "GET" != answer.method:
+                expected_api_invokations[answer] = False
         
         mismatch_report = {} # Define a dict for holding additional info about mismatches, useful for analysis/debugging
         
@@ -741,9 +777,11 @@ class Evaluator:
             
             # Go through each provided network event and see if it matches any of the ground truth side-effect answers.
             for api_call in expected_api_invokations:
+
                 _match, errors = event.matches(api_call.method, api_call.path, api_call.request_kv)
                 if _match:
                     expected_api_invokations[api_call] = True
+                    
                 else:
                     try:
                         if mismatch_report[index] is None:

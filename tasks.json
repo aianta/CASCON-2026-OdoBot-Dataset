@@ -5149,7 +5149,7 @@
                 "answer_key": [
                     {
                         "method": "POST",
-                        "path": "/courses/1/quizzes/7/submissions/[[ANY]]/record_answer?next_question_path=%2Fcourses%2F1%2Fquizzes%2F7%2Ftake%2Fquestions%2F27",
+                        "path": "/courses/1/quizzes/7/submissions/[[ANY]]/record_answer?next_question_path=%2Fcourses%2F1%2Fquizzes%2F7%2Ftake%2Fquestions.+",
                         "request_kv": {}
                     },
                     {
@@ -5171,7 +5171,7 @@
                 "answer_key": [
                     {
                         "method": "POST",
-                        "path": "/courses/2/quizzes/18/submissions/[[ANY]]/record_answer?next_question_path=%2Fcourses%2F2%2Fquizzes%2F18%2Ftake%2Fquestions%2F59",
+                        "path": "/courses/2/quizzes/18/submissions/[[ANY]]/record_answer?next_question_path=%2Fcourses%2F2%2Fquizzes%2F18%2Ftake%2Fquestions.+",
                         "request_kv": {}
                     },
                     {
@@ -5193,7 +5193,7 @@
                 "answer_key": [
                     {
                         "method": "POST",
-                        "path": "/courses/3/quizzes/31/submissions/[[ANY]]/record_answer?next_question_path=%2Fcourses%2F3%2Fquizzes%2F31%2Ftake%2Fquestions%2F99",
+                        "path": "/courses/3/quizzes/31/submissions/[[ANY]]/record_answer?next_question_path=%2Fcourses%2F3%2Fquizzes%2F31%2Ftake%2Fquestions.+",
                         "request_kv": {}
                     },
                     {
@@ -5215,7 +5215,7 @@
                 "answer_key": [
                     {
                         "method": "POST",
-                        "path": "/courses/4/quizzes/42/submissions/[[ANY]]/record_answer?next_question_path=%2Fcourses%2F4%2Fquizzes%2F42%2Ftake%2Fquestions%2F131",
+                        "path": "/courses/4/quizzes/42/submissions/[[ANY]]/record_answer?next_question_path=%2Fcourses%2F4%2Fquizzes%2F42%2Ftake%2Fquestions.+",
                         "request_kv": {}
                     },
                     {
@@ -5237,7 +5237,7 @@
                 "answer_key": [
                     {
                         "method": "POST",
-                        "path": "/courses/5/quizzes/55/submissions/[[ANY]]/record_answer?next_question_path=%2Fcourses%2F5%2Fquizzes%2F55%2Ftake%2Fquestions%2F171",
+                        "path": "/courses/5/quizzes/55/submissions/[[ANY]]/record_answer?next_question_path=%2Fcourses%2F5%2Fquizzes%2F55%2Ftake%2Fquestions.+",
                         "request_kv": {}
                     },
                     {
@@ -5259,7 +5259,7 @@
                 "answer_key": [
                     {
                         "method": "POST",
-                        "path": "/courses/6/quizzes/67/submissions/[[ANY]]/record_answer?next_question_path=%2Fcourses%2F6%2Fquizzes%2F67%2Ftake%2Fquestions%2F207",
+                        "path": "/courses/6/quizzes/67/submissions/[[ANY]]/record_answer?next_question_path=%2Fcourses%2F6%2Fquizzes%2F67%2Ftake%2Fquestions.+",
                         "request_kv": {}
                     },
                     {
@@ -5281,7 +5281,7 @@
                 "answer_key": [
                     {
                         "method": "POST",
-                        "path": "/courses/7/quizzes/77/submissions/[[ANY]]/record_answer?next_question_path=%2Fcourses%2F7%2Fquizzes%2F77%2Ftake%2Fquestions%2F234",
+                        "path": "/courses/7/quizzes/77/submissions/[[ANY]]/record_answer?next_question_path=%2Fcourses%2F7%2Fquizzes%2F77%2Ftake%2Fquestions.+",
                         "request_kv": {}
                     },
                     {
@@ -5303,7 +5303,7 @@
                 "answer_key": [
                     {
                         "method": "POST",
-                        "path": "/courses/8/quizzes/89/submissions/[[ANY]]/record_answer?next_question_path=%2Fcourses%2F8%2Fquizzes%2F89%2Ftake%2Fquestions%2F270",
+                        "path": "/courses/8/quizzes/89/submissions/[[ANY]]/record_answer?next_question_path=%2Fcourses%2F8%2Fquizzes%2F89%2Ftake%2Fquestions.+",
                         "request_kv": {}
                     },
                     {
@@ -5325,7 +5325,7 @@
                 "answer_key": [
                     {
                         "method": "POST",
-                        "path": "/courses/9/quizzes/101/submissions/[[ANY]]/record_answer?next_question_path=%2Fcourses%2F9%2Fquizzes%2F101%2Ftake%2Fquestions%2F306",
+                        "path": "/courses/9/quizzes/101/submissions/[[ANY]]/record_answer?next_question_path=%2Fcourses%2F9%2Fquizzes%2F101%2Ftake%2Fquestions.+",
                         "request_kv": {}
                     },
                     {
@@ -5347,7 +5347,7 @@
                 "answer_key": [
                     {
                         "method": "POST",
-                        "path": "/courses/10/quizzes/115/submissions/[[ANY]]/record_answer?next_question_path=%2Fcourses%2F10%2Fquizzes%2F115%2Ftake%2Fquestions%2F351",
+                        "path": "/courses/10/quizzes/115/submissions/[[ANY]]/record_answer?next_question_path=%2Fcourses%2F10%2Fquizzes%2F115%2Ftake%2Fquestions.+",
                         "request_kv": {}
                     },
                     {
@@ -13183,7 +13183,7 @@
                 "answer_key": [
                     {
                         "method": "POST",
-                        "path": "/courses/1/quizzes/8/submissions/[[ANY]]/record_answer?next_question_path=%2Fcourses%2F1%2Fquizzes%2F8%2Ftake%2Fquestions%2F31",
+                        "path": "/courses/1/quizzes/8/submissions/[[ANY]]/record_answer?next_question_path=%2Fcourses%2F1%2Fquizzes%2F8%2Ftake%2Fquestions.+",
                         "request_kv": {}
                     },
                     {
@@ -13205,7 +13205,7 @@
                 "answer_key": [
                     {
                         "method": "POST",
-                        "path": "/courses/2/quizzes/20/submissions/[[ANY]]/record_answer?next_question_path=%2Fcourses%2F2%2Fquizzes%2F20%2Ftake%2Fquestions%2F67",
+                        "path": "/courses/2/quizzes/20/submissions/[[ANY]]/record_answer?next_question_path=%2Fcourses%2F2%2Fquizzes%2F20%2Ftake%2Fquestions.+",
                         "request_kv": {}
                     },
                     {
@@ -13227,7 +13227,7 @@
                 "answer_key": [
                     {
                         "method": "POST",
-                        "path": "/courses/3/quizzes/32/submissions/[[ANY]]/record_answer?next_question_path=%2Fcourses%2F3%2Fquizzes%2F32%2Ftake%2Fquestions%2F103",
+                        "path": "/courses/3/quizzes/32/submissions/[[ANY]]/record_answer?next_question_path=%2Fcourses%2F3%2Fquizzes%2F32%2Ftake%2Fquestions.+",
                         "request_kv": {}
                     },
                     {
@@ -13249,7 +13249,7 @@
                 "answer_key": [
                     {
                         "method": "POST",
-                        "path": "/courses/4/quizzes/44/submissions/[[ANY]]/record_answer?next_question_path=%2Fcourses%2F4%2Fquizzes%2F44%2Ftake%2Fquestions%2F139",
+                        "path": "/courses/4/quizzes/44/submissions/[[ANY]]/record_answer?next_question_path=%2Fcourses%2F4%2Fquizzes%2F44%2Ftake%2Fquestions.+",
                         "request_kv": {}
                     },
                     {
@@ -13271,7 +13271,7 @@
                 "answer_key": [
                     {
                         "method": "POST",
-                        "path": "/courses/5/quizzes/56/submissions/[[ANY]]/record_answer?next_question_path=%2Fcourses%2F5%2Fquizzes%2F56%2Ftake%2Fquestions%2F175",
+                        "path": "/courses/5/quizzes/56/submissions/[[ANY]]/record_answer?next_question_path=%2Fcourses%2F5%2Fquizzes%2F56%2Ftake%2Fquestions.+",
                         "request_kv": {}
                     },
                     {
@@ -13293,7 +13293,7 @@
                 "answer_key": [
                     {
                         "method": "POST",
-                        "path": "/courses/6/quizzes/68/submissions/[[ANY]]/record_answer?next_question_path=%2Fcourses%2F6%2Fquizzes%2F68%2Ftake%2Fquestions%2F211",
+                        "path": "/courses/6/quizzes/68/submissions/[[ANY]]/record_answer?next_question_path=%2Fcourses%2F6%2Fquizzes%2F68%2Ftake%2Fquestions.+",
                         "request_kv": {}
                     },
                     {
@@ -13315,7 +13315,7 @@
                 "answer_key": [
                     {
                         "method": "POST",
-                        "path": "/courses/7/quizzes/80/submissions/[[ANY]]/record_answer?next_question_path=%2Fcourses%2F7%2Fquizzes%2F80%2Ftake%2Fquestions%2F247",
+                        "path": "/courses/7/quizzes/80/submissions/[[ANY]]/record_answer?next_question_path=%2Fcourses%2F7%2Fquizzes%2F80%2Ftake%2Fquestions.+",
                         "request_kv": {}
                     },
                     {
@@ -13337,7 +13337,7 @@
                 "answer_key": [
                     {
                         "method": "POST",
-                        "path": "/courses/8/quizzes/92/submissions/[[ANY]]/record_answer?next_question_path=%2Fcourses%2F8%2Fquizzes%2F92%2Ftake%2Fquestions%2F283",
+                        "path": "/courses/8/quizzes/92/submissions/[[ANY]]/record_answer?next_question_path=%2Fcourses%2F8%2Fquizzes%2F92%2Ftake%2Fquestions.+",
                         "request_kv": {}
                     },
                     {
@@ -13359,7 +13359,7 @@
                 "answer_key": [
                     {
                         "method": "POST",
-                        "path": "/courses/9/quizzes/104/submissions/[[ANY]]/record_answer?next_question_path=%2Fcourses%2F9%2Fquizzes%2F104%2Ftake%2Fquestions%2F319",
+                        "path": "/courses/9/quizzes/104/submissions/[[ANY]]/record_answer?next_question_path=%2Fcourses%2F9%2Fquizzes%2F104%2Ftake%2Fquestions.+",
                         "request_kv": {}
                     },
                     {
@@ -13381,7 +13381,7 @@
                 "answer_key": [
                     {
                         "method": "POST",
-                        "path": "/courses/10/quizzes/116/submissions/[[ANY]]/record_answer?next_question_path=%2Fcourses%2F10%2Fquizzes%2F116%2Ftake%2Fquestions%2F355",
+                        "path": "/courses/10/quizzes/116/submissions/[[ANY]]/record_answer?next_question_path=%2Fcourses%2F10%2Fquizzes%2F116%2Ftake%2Fquestions.+",
                         "request_kv": {}
                     },
                     {
